@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Entrada AfterWine</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 40px; }
+    .codigo { font-size: 24px; margin-top: 20px; color: #800000; }
+  </style>
+</head>
+<body>
+  <h1>🍷 AfterWine</h1>
+  <p>Gracias por tu inscripción.</p>
+  <div class="codigo" id="codigo"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const codigo = params.get("id");
+    document.getElementById("codigo").textContent = "Tu código de entrada es: " + codigo;
+  </script>
+</body>
+</html>
